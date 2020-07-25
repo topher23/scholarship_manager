@@ -27,8 +27,8 @@ def email_send(result):
         "https://api.mailgun.net/v3/sandboxb65cde344acd4820963ca79eec33db5c.mailgun.org/messages",
         auth=("api", mailgun_private_key),
         data={"from": "ScholarshipService@test.com",
-            "to": "topher23@vt.edu",
-            "subject": "New Scholarships! 2",
+            "to": "dorick_test_gatech@yopmail.com",
+            "subject": "New Scholarships!",
             "text": text})
 
 size = -1

@@ -7,6 +7,7 @@ from database import Database
 from scholarship import ScholarshipFilter
 
 db = Database()
+mailgun_private_key = ""
 
 #build golden query
 query=ScholarshipFilter()
@@ -24,7 +25,7 @@ def email_send(result):
 
     return requests.post(
         "https://api.mailgun.net/v3/sandboxb65cde344acd4820963ca79eec33db5c.mailgun.org/messages",
-        auth=("api", ""),
+        auth=("api", mailgun_private_key),
         data={"from": "ScholarshipService@test.com",
             "to": "topher23@vt.edu",
             "subject": "New Scholarships! 2",

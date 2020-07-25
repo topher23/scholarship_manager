@@ -24,7 +24,7 @@ def email_send(result):
 
     return requests.post(
         "https://api.mailgun.net/v3/sandboxb65cde344acd4820963ca79eec33db5c.mailgun.org/messages",
-        auth=("api", "defc6daf52c9aef40264a6cd923f83ce-ffefc4e4-4b4cb55d"),
+        auth=("api", ""),
         data={"from": "ScholarshipService@test.com",
             "to": "topher23@vt.edu",
             "subject": "New Scholarships! 2",

@@ -46,9 +46,9 @@ while(1):
         #send email
         size = fresh_size
         print("new content! sending email then sleeping for 60s")
-        email_send(query_result)
+        did_send = email_send(query_result)
+        print(did_send.content)
     else:
-        email_send(query_result)
         print("no new content. Sleeping for 60s")
 
     sleep(60)

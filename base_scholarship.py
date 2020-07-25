@@ -26,8 +26,10 @@ class BaseScholarship(BaseModel):
             self.handedness = 'merit'
         elif self.merit_or_need_based.lower() == 'need':
             self.handedness = 'need'
+        elif self.merit_or_need_based.lower() == 'both':
+            self.handedness = 'both'
         else:
-            return Returns(False, "merit/need based field is wrong. use word 'merit' or 'need'").response()
+            return Returns(False, "merit/need based field is wrong. use word 'merit', 'need', or 'both'").response()
         return
 
     def sanitize_handedness(self):
